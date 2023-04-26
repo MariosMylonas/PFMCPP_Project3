@@ -436,11 +436,11 @@ example:
 
 Thing 5) audio department
 5 properties:
-    1) personel size
-    2) allocated budget
-    3) department head
-    4) number of studios
-    5) department logo
+    1) personel size (int)
+    2) allocated budget (float)
+    3) department head (std::string)
+    4) number of studios (int)
+    5) department logo (std::string)
 3 things it can do:
     1) implement audio productions
     2) test audio software
@@ -448,11 +448,11 @@ Thing 5) audio department
 
 Thing 6) visual department
 5 properties:
-    1) number of videocameras
-    2) number of light projectors
-    3) department logo
-    4) prefered editing software
-    5) prefered cloud storage solution
+    1) number of videocameras (int)
+    2) number of light projectors (int)
+    3) department logo (std::string)
+    4) prefered editing software (std::string)
+    5) prefered cloud storage solution (std::string)
 3 things it can do:
     1) create animation
     2) color grade video footage
@@ -460,11 +460,11 @@ Thing 6) visual department
 
 Thing 7) sales
 5 properties:
-    1) software copies sold
-    2) software price
-    3) number of steady clients
-    4) number of subscribers to cloud solutions
-    5) department email address
+    1) software copies sold (int)
+    2) software price (float)
+    3) number of steady clients (int)
+    4) number of subscribers to cloud solutions (int)
+    5) department email address (std::string)
 3 things it can do:
     1) sell software
     2) reach out to potential clients
@@ -472,11 +472,11 @@ Thing 7) sales
 
 Thing 8) RnD department
 5 properties:
-    1) number of laboratories
-    2) prefered programming language
-    3) available funding
-    4) prefered academic background
-    5) total number of programming languages used
+    1) number of laboratories (int)
+    2) prefered programming language (std::string)
+    3) available funding (float)
+    4) prefered academic background (std::string)
+    5) total number of programming languages used (int)
 3 things it can do:
     1) develop software
     2) implement new algorithms
@@ -484,11 +484,11 @@ Thing 8) RnD department
 
 Thing 9) finance and advertising
 5 properties:
-    1) number of employees
-    2) employee salary
-    3) manager salary
-    4) number of social media platforms used for advertising
-    5) department head
+    1) number of employees (int)
+    2) employee salary (float)
+    3) manager salary (float)
+    4) number of social media platforms used for advertising (int)
+    5) department head (std::string)
 3 things it can do:
     1) advertise the companie's products on social media
     2) create the company logo
