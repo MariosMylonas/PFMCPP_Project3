@@ -343,7 +343,7 @@ Thing 10) audiovisual company
     2) visual department
     3) sales
     4) RnD department
-    5) Finance and marketing
+    5) finance and marketing
 3 things it can do:
     1) create audiovisual content
     2) develop new audiovisual software
@@ -434,65 +434,65 @@ example:
     You will need to provide 5 properties and 3 member functions of that Engine object in plain English.
     Remember to pick properties that can be represented with 'int float double bool char std::string'.
 
-Thing 5)
+Thing 5) audio department
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) personel size
+    2) allocated budget
+    3) department head
+    4) number of studios
+    5) department logo
 3 things it can do:
-    1)
-    2)
-    3)
+    1) implement audio productions
+    2) test audio software
+    3) record audio
 
-Thing 6)
+Thing 6) visual department
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of videocameras
+    2) number of light projectors
+    3) department logo
+    4) prefered editing software
+    5) prefered cloud storage solution
 3 things it can do:
-    1)
-    2)
-    3)
+    1) create animation
+    2) color grade video footage
+    3) edit short films
 
-Thing 7)
+Thing 7) sales
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) software copies sold
+    2) software price
+    3) number of steady clients
+    4) number of subscribers to cloud solutions
+    5) department email address
 3 things it can do:
-    1)
-    2)
-    3)
+    1) sell software
+    2) reach out to potential clients
+    3) negotiate better deals for large contracts
 
-Thing 8)
+Thing 8) RnD department
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of laboratories
+    2) prefered programming language
+    3) available funding
+    4) prefered academic background
+    5) total number of programming languages used
 3 things it can do:
-    1)
-    2)
-    3)
+    1) develop software
+    2) implement new algorithms
+    3) reseach human perception of audio
 
-Thing 9)
+Thing 9) finance and advertising
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of employees
+    2) employee salary
+    3) manager salary
+    4) number of social media platforms used for advertising
+    5) department head
 3 things it can do:
-    1)
-    2)
-    3)
+    1) advertise the companie's products on social media
+    2) create the company logo
+    3) pay the employees
  */
 
 /*
