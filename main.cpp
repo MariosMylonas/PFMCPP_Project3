@@ -214,7 +214,7 @@ Thing 2) synthesizer
     2) number of oscillators
     3) number of LFOs
     4) output volume
-    5) ADSR module
+    5) Attack time
 3 things it can do:
     1) generate audio
     2) fitler frequencies
