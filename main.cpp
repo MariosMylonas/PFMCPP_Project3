@@ -198,11 +198,11 @@ Part 1b - Step 2: Assignment
 
 Thing 1) computer
 5 properties:
-    1) amount of ram
-    2) CPU cores
-    3) GPU cores
-    4) amount of memory
-    5) daily hours of operation
+    1) amount of ram (int)
+    2) CPU cores (int)
+    3) GPU cores (int)
+    4) amount of memory (int)
+    5) daily hours of operation (float)
 3 things it can do:
     1) compile code
     2) produce MIDI
@@ -210,11 +210,11 @@ Thing 1) computer
 
 Thing 2) synthesizer
 5 properties:
-    1) number of keys
-    2) number of oscillators
-    3) number of LFOs
-    4) output volume
-    5) Attack time
+    1) number of keys (int)
+    2) number of oscillators (int)
+    3) number of LFOs (int)
+    4) output volume (double)
+    5) Attack time (float)
 3 things it can do:
     1) generate audio
     2) fitler frequencies
@@ -222,11 +222,11 @@ Thing 2) synthesizer
 
 Thing 3) basketball court
 5 properties:
-    1) number of basketballs
-    2) nubmer of seats
-    3) cafeteria profits
-    4) administration personel size
-    5) team size
+    1) number of basketballs (int)
+    2) nubmer of seats (int)
+    3) cafeteria profits (float)
+    4) administration personel size (int)
+    5) team size (int)
 3 things it can do:
     1) host basketball games
     2) host sport events
@@ -234,11 +234,11 @@ Thing 3) basketball court
 
 Thing 4) cafeteria
 5 properties:
-    1) price of coffee
-    2) amount of emplyees
-    3) price of sandwich
-    4) amount of rent per month
-    5) number of customers per month
+    1) price of coffee (float)
+    2) amount of emplyees (int)
+    3) price of sandwich (float)
+    4) amount of rent per month (float)
+    5) number of customers per month (int)
 3 things it can do:
     1) sell coffee
     2) provide a place for friendly meetings
