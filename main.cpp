@@ -439,14 +439,19 @@ struct computer
 {
     //5 properties:
     //    1) amount of ram (int)
+            int ram = 16;
     //    2) CPU cores (int)
+            int cpuCores = 8;
     //    3) GPU cores (int)
+            int gpuCores = 8;
     //    4) amount of memory (int)
+            int amountOfMemory = 512;
     //    5) daily hours of operation (float)
+            float dailyHoursOfOperation = 8.5f;
     //3 things it can do:
     //    1) compile code
     //    2) produce MIDI
-    //3) stream movies
+    //    3) stream movies
 };
 
 /*
@@ -457,10 +462,15 @@ struct synthesizer
 {
     //5 properties:
     //    1) number of keys (int)
+            int numberOfKeys = 61;
     //    2) number of oscillators (int)
+            int numberOfOscillators = 4;
     //    3) number of LFOs (int)
+            int numberOfLfos = 2;
     //    4) output volume (double)
+            double outputVolume = 72.8;
     //    5) Attack time (float)
+            float attackTime = 0.31f;
     //3 things it can do:
     //    1) generate audio
     //    2) fitler frequencies
@@ -475,10 +485,15 @@ struct basketballCourt
 {
     //5 properties:
     //    1) number of basketballs (int)
+            int numberOfBasketballs = 41;
     //    2) nubmer of seats (int)
+            int numberOfSeats = 25000;
     //    3) cafeteria profits (float)
+            float cafeteriaProfits = 684.18f;
     //    4) administration personel size (int)
+            int administraionPersonelSize = 14;
     //    5) team size (int)
+            int teamSize = 12;
     //3 things it can do:
     //    1) host basketball games
     //    2) host sport events
@@ -493,10 +508,15 @@ struct cafeteria
 {
     //5 properties:
     //    1) price of coffee (float)
+            float priceOfCoffee = 3.2f;
     //    2) amount of emplyees (int)
+            int amountOfEmployees = 8;
     //    3) price of sandwich (float)
+            float priceOfSandwich = 4.8f;
     //    4) amount of rent per month (float)
+            float amountOfRentPerMonth = 1028.12f;
     //    5) number of customers per month (int)
+            int numberOfCustomersPerMonth = 964;
     //3 things it can do:
     //    1) sell coffee
     //    2) provide a place for friendly meetings
@@ -508,14 +528,19 @@ struct cafeteria
 Thing 5) audio department
 
  */
-struct audioDepartment
+struct AudioDepartment
 {
     //5 properties:
     //    1) personel size (int)
+            int personelSize = 68;
     //    2) allocated budget (float)
+            float allocatedBudget = 12832.4f;
     //    3) department head (std::string)
+            std::string departmentHead = "John";
     //    4) number of studios (int)
+            int numberOfStudios = 3;
     //    5) department logo (std::string)
+            std::string departmentLogo = "all Audio";
     //3 things it can do:
     //    1) implement audio productions
     //    2) test audio software
@@ -527,14 +552,19 @@ struct audioDepartment
 Thing 6) visual department
 
  */
-struct visualDepartment
+struct VisualDepartment
 {
     //5 properties:
     //    1) number of videocameras (int)
+            int numberOfVideocameras = 11;
     //    2) number of light projectors (int)
+            int numberOfLightProjectors = 8;
     //    3) department logo (std::string)
+            std::string departmentLogo = "all Video";
     //    4) prefered editing software (std::string)
+            std::string preferedEditingSoftware = "davinci resolve";
     //    5) prefered cloud storage solution (std::string)
+            std::string preferedCloudStorageSolution = "dropbox for business";
     //3 things it can do:
     //    1) create animation
     //    2) color grade video footage
@@ -546,14 +576,19 @@ struct visualDepartment
 Thing 7) sales
 
  */
-struct sales
+struct Sales
 {
     //5 properties:
     //    1) software copies sold (int)
+            int softwareCopiesSold = 19842;
     //    2) software price (float)
+            float softwarePrice = 98.12f;
     //    3) number of steady clients (int)
+            int numberOfSteadyClients = 84;
     //    4) number of subscribers to cloud solutions (int)
+            int numberOfSubscribersToCloudSolutions = 81;
     //    5) department email address (std::string)
+            std::string departmentEmailAddress = "companymail@gmail.com";
     //3 things it can do:
     //    1) sell software
     //    2) reach out to potential clients
@@ -565,14 +600,19 @@ struct sales
 Thing 8) RnD department
 
  */
-struct rndDevelopment
+struct RndDevelopment
 {
     //5 properties:
     //    1) number of laboratories (int)
+            int numberOfLaboratories = 4;
     //    2) prefered programming language (std::string)
+            std::string preferedProgrammingLanguage = "C++";
     //    3) available funding (float)
+            float availableFunding = 14121.5f;
     //    4) prefered academic background (std::string)
+            std::string preferedAcademicBackground = "Master's degree";
     //    5) total number of programming languages used (int)
+            int totalNumberOfProgrammingLanguagesUsed = 5;
     //3 things it can do:
     //    1) develop software
     //    2) implement new algorithms
@@ -584,14 +624,19 @@ struct rndDevelopment
 Thing 9) finance and advertising
 
  */
-struct financeAndAdvertising
+struct FinanceAndAdvertising
 {
     //5 properties:
     //    1) number of employees (int)
+            int numberOfEmployees = 28;
     //    2) employee salary (float)
+            float employeeSalary = 62850.4f;
     //    3) manager salary (float)
+            float managerSalary = 81372.9f;
     //    4) number of social media platforms used for advertising (int)
+            int numberOfSocialMediaPlatformsUsedForAdvertising = 11;
     //    5) department head (std::string)
+            std::string departmentHead = "Mary";
     //3 things it can do:
     //    1) advertise the companie's products on social media
     //    2) create the company logo
@@ -608,10 +653,15 @@ struct audiovisualCompany
 {
     //5 properties:
     //    1) audio department
+            AudioDepartment audioDepartment;
     //    2) visual department
+            VisualDepartment visualDepartment;
     //    3) sales
+            Sales sales;
     //    4) RnD department
-    //    5) finance and marketing
+            RndDevelopment rndDevelopment;
+    //    5) finance and advertising
+            FinanceAndAdvertising financeAndAdvertising;
     //3 things it can do:
     //    1) create audiovisual content
     //    2) develop new audiovisual software
