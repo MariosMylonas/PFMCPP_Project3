@@ -450,8 +450,11 @@ struct computer
             float dailyHoursOfOperation = 8.5f;
     //3 things it can do:
     //    1) compile code
+            void compileCode();
     //    2) produce MIDI
+            void produceMidi();
     //    3) stream movies
+            void streamMovies();
 };
 
 /*
@@ -473,8 +476,11 @@ struct synthesizer
             float attackTime = 0.31f;
     //3 things it can do:
     //    1) generate audio
+            void generateAudio(float inputFrequency);
     //    2) fitler frequencies
+            void filterFrequencies(float cutOffFrequency);
     //    3) change the audio's envelope
+            void changeTheAudioEnvelope();
 };
 
 /*
@@ -496,8 +502,11 @@ struct basketballCourt
             int teamSize = 12;
     //3 things it can do:
     //    1) host basketball games
+            void hostBasketballGames();
     //    2) host sport events
+            void hostSportEvents();
     //    3) sell tickets
+            float sellTickets(float ticketPrice); //returns the amount of money earned
 };
 
 /*
@@ -519,8 +528,11 @@ struct cafeteria
             int numberOfCustomersPerMonth = 964;
     //3 things it can do:
     //    1) sell coffee
+            float sellCoffee(float coffeePrice); //returns the amount of money earned
     //    2) provide a place for friendly meetings
+            void providePlaceForFriendlyMeetings();
     //    3) sell snacks
+            float sellSnacks(float snacksPrice); //returns the amount of money earned
 
 };
 
@@ -543,8 +555,11 @@ struct AudioDepartment
             std::string departmentLogo = "all Audio";
     //3 things it can do:
     //    1) implement audio productions
+            void implementAudioProductions();
     //    2) test audio software
+            void testAudioSoftware();
     //    3) record audio
+            void recordAudio(int numberOfMicrophones);
 
 };
 
@@ -567,8 +582,11 @@ struct VisualDepartment
             std::string preferedCloudStorageSolution = "dropbox for business";
     //3 things it can do:
     //    1) create animation
+            void createAnimation();
     //    2) color grade video footage
-    // 3) edit short films
+            void colorGradeVideoFootage();
+    //    3) edit short films
+            void editShortFilms();
 
 };
 
@@ -591,8 +609,11 @@ struct Sales
             std::string departmentEmailAddress = "companymail@gmail.com";
     //3 things it can do:
     //    1) sell software
+            float sellSoftware(float softwarePrice); //returns the amount of money earned
     //    2) reach out to potential clients
+            void reachOutToPotentialClients();
     //    3) negotiate better deals for large contracts
+            void negotiateBetterDealsForLargeContracts();
 
 };
 
@@ -615,8 +636,11 @@ struct RndDevelopment
             int totalNumberOfProgrammingLanguagesUsed = 5;
     //3 things it can do:
     //    1) develop software
+            void developSoftware();
     //    2) implement new algorithms
+            void implementNewAlgorithms();
     //    3) reseach human perception of audio
+            void researchHumanPerceptionOfAudio();
 
 };
 
@@ -639,8 +663,11 @@ struct FinanceAndAdvertising
             std::string departmentHead = "Mary";
     //3 things it can do:
     //    1) advertise the companie's products on social media
+            void advertiseCompanyProductsOnSocialMedia();
     //    2) create the company logo
+            void createCompanyLogo();
     //    3) pay the employees
+            float payTheEmployees(float employeeSalary, int numberOfEmployees); //returns the amount of money paid to the employes
 
 };
 
@@ -664,8 +691,11 @@ struct audiovisualCompany
             FinanceAndAdvertising financeAndAdvertising;
     //3 things it can do:
     //    1) create audiovisual content
+            void createAudiovisualContent();
     //    2) develop new audiovisual software
+            void developNewAudiovisualSoftware();
     //    3) sell products to customers
+            void sellProductsToCustomers();
 
 };
 
