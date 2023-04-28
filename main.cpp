@@ -435,7 +435,7 @@ MOVE THEM to the space below this block comment and put them in numerical order
 Thing 1) computer
 
  */
-struct computer
+struct Computer
 {
     //5 properties:
     //    1) amount of ram (int)
@@ -448,6 +448,21 @@ struct computer
             int amountOfMemory = 512;
     //    5) daily hours of operation (float)
             float dailyHoursOfOperation = 8.5f;
+
+    //this is the nested UDT
+    struct Monitor
+    {
+        int horizontalPixels = 3840;
+        int verticalPixels = 2160;
+        float inches = 40.3f;
+        std::string panelType = "IPS";
+        float pixelDensity = 110.15;
+
+        void transmitVideo(std::string connectorType = "HDMI");
+        float setNitBrightness(); //returns the nit brightness value
+        void connectUSB(bool availablePort = "false");
+    };
+
     //3 things it can do:
     //    1) compile code
             void compileCode();
@@ -461,7 +476,7 @@ struct computer
 Thing 2) synthesizer
 
  */
-struct synthesizer
+struct Synthesizer
 {
     //5 properties:
     //    1) number of keys (int)
@@ -487,7 +502,7 @@ struct synthesizer
 Thing 3) basketball court
 
  */
-struct basketballCourt
+struct BasketballCourt
 {
     //5 properties:
     //    1) number of basketballs (int)
@@ -500,6 +515,21 @@ struct basketballCourt
             int administraionPersonelSize = 14;
     //    5) team size (int)
             int teamSize = 12;
+
+    //this is the nested UDT
+    struct EventsSchedule
+    {
+        int bookedDaysPerMonth = 24;
+        float percentageOfBasketballGamesVsOtherEvents = 61.2f;
+        int numberOfCancellations = 3;
+        std::string eventCoordinator = "Stella";
+        std::string appForOrganizing = "Notion";
+
+        void cancelAllMondayEvents(int numberOfMondayEvents);
+        void rescheduleAllWendesdayEvents(int numberOfWendesdayEvents);
+        void organizeNextMonthsSchedule();
+    };
+
     //3 things it can do:
     //    1) host basketball games
             void hostBasketballGames();
@@ -513,7 +543,7 @@ struct basketballCourt
 Thing 4) cafeteria
 
  */
-struct cafeteria
+struct Cafeteria
 {
     //5 properties:
     //    1) price of coffee (float)
