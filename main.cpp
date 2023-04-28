@@ -443,7 +443,13 @@ Thing 1) computer
     1) compile code
     2) produce MIDI
     3) stream movies
+ */
+struct computer
+{
 
+};
+
+/*
 Thing 2) synthesizer
 5 properties:
     1) number of keys (int)
@@ -455,7 +461,13 @@ Thing 2) synthesizer
     1) generate audio
     2) fitler frequencies
     3) change the audio's envelope
+ */
+struct synthesizer
+{
 
+};
+
+/*
 Thing 3) basketball court
 5 properties:
     1) number of basketballs (int)
@@ -467,7 +479,13 @@ Thing 3) basketball court
     1) host basketball games
     2) host sport events
     3) sell tickets
+ */
+struct basketballCourt
+{
 
+};
+
+/*
 Thing 4) cafeteria
 5 properties:
     1) price of coffee (float)
@@ -479,7 +497,13 @@ Thing 4) cafeteria
     1) sell coffee
     2) provide a place for friendly meetings
     3) sell snacks
+ */
+struct cafeteria
+{
 
+};
+
+/*
 Thing 5) audio department
 5 properties:
     1) personel size (int)
@@ -491,7 +515,13 @@ Thing 5) audio department
     1) implement audio productions
     2) test audio software
     3) record audio
+ */
+struct audioDepartment
+{
 
+};
+
+/*
 Thing 6) visual department
 5 properties:
     1) number of videocameras (int)
@@ -503,7 +533,13 @@ Thing 6) visual department
     1) create animation
     2) color grade video footage
     3) edit short films
+ */
+struct visualDepartment
+{
 
+};
+
+/*
 Thing 7) sales
 5 properties:
     1) software copies sold (int)
@@ -515,7 +551,13 @@ Thing 7) sales
     1) sell software
     2) reach out to potential clients
     3) negotiate better deals for large contracts
+ */
+struct sales
+{
 
+};
+
+/*
 Thing 8) RnD department
 5 properties:
     1) number of laboratories (int)
@@ -527,7 +569,13 @@ Thing 8) RnD department
     1) develop software
     2) implement new algorithms
     3) reseach human perception of audio
+ */
+struct rndDevelopment
+{
 
+};
+
+/*
 Thing 9) finance and advertising
 5 properties:
     1) number of employees (int)
@@ -539,7 +587,13 @@ Thing 9) finance and advertising
     1) advertise the companie's products on social media
     2) create the company logo
     3) pay the employees
+ */
+struct financeAndAdvertising
+{
 
+};
+
+/*
 Thing 10) audiovisual company
 5 properties:
     1) audio department
@@ -552,7 +606,11 @@ Thing 10) audiovisual company
     2) develop new audiovisual software
     3) sell products to customers
 */
+ */
+struct audiovisualCompany
+{
 
+};
 
 
 /*
