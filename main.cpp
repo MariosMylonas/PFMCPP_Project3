@@ -433,182 +433,189 @@ MOVE THEM to the space below this block comment and put them in numerical order
 
 /*
 Thing 1) computer
-5 properties:
-    1) amount of ram (int)
-    2) CPU cores (int)
-    3) GPU cores (int)
-    4) amount of memory (int)
-    5) daily hours of operation (float)
-3 things it can do:
-    1) compile code
-    2) produce MIDI
-    3) stream movies
+
  */
 struct computer
 {
-
+    //5 properties:
+    //    1) amount of ram (int)
+    //    2) CPU cores (int)
+    //    3) GPU cores (int)
+    //    4) amount of memory (int)
+    //    5) daily hours of operation (float)
+    //3 things it can do:
+    //    1) compile code
+    //    2) produce MIDI
+    //3) stream movies
 };
 
 /*
 Thing 2) synthesizer
-5 properties:
-    1) number of keys (int)
-    2) number of oscillators (int)
-    3) number of LFOs (int)
-    4) output volume (double)
-    5) Attack time (float)
-3 things it can do:
-    1) generate audio
-    2) fitler frequencies
-    3) change the audio's envelope
+
  */
 struct synthesizer
 {
-
+    //5 properties:
+    //    1) number of keys (int)
+    //    2) number of oscillators (int)
+    //    3) number of LFOs (int)
+    //    4) output volume (double)
+    //    5) Attack time (float)
+    //3 things it can do:
+    //    1) generate audio
+    //    2) fitler frequencies
+    //    3) change the audio's envelope
 };
 
 /*
 Thing 3) basketball court
-5 properties:
-    1) number of basketballs (int)
-    2) nubmer of seats (int)
-    3) cafeteria profits (float)
-    4) administration personel size (int)
-    5) team size (int)
-3 things it can do:
-    1) host basketball games
-    2) host sport events
-    3) sell tickets
+
  */
 struct basketballCourt
 {
-
+    //5 properties:
+    //    1) number of basketballs (int)
+    //    2) nubmer of seats (int)
+    //    3) cafeteria profits (float)
+    //    4) administration personel size (int)
+    //    5) team size (int)
+    //3 things it can do:
+    //    1) host basketball games
+    //    2) host sport events
+    //    3) sell tickets
 };
 
 /*
 Thing 4) cafeteria
-5 properties:
-    1) price of coffee (float)
-    2) amount of emplyees (int)
-    3) price of sandwich (float)
-    4) amount of rent per month (float)
-    5) number of customers per month (int)
-3 things it can do:
-    1) sell coffee
-    2) provide a place for friendly meetings
-    3) sell snacks
+
  */
 struct cafeteria
 {
+    //5 properties:
+    //    1) price of coffee (float)
+    //    2) amount of emplyees (int)
+    //    3) price of sandwich (float)
+    //    4) amount of rent per month (float)
+    //    5) number of customers per month (int)
+    //3 things it can do:
+    //    1) sell coffee
+    //    2) provide a place for friendly meetings
+    //    3) sell snacks
 
 };
 
 /*
 Thing 5) audio department
-5 properties:
-    1) personel size (int)
-    2) allocated budget (float)
-    3) department head (std::string)
-    4) number of studios (int)
-    5) department logo (std::string)
-3 things it can do:
-    1) implement audio productions
-    2) test audio software
-    3) record audio
+
  */
 struct audioDepartment
 {
+    //5 properties:
+    //    1) personel size (int)
+    //    2) allocated budget (float)
+    //    3) department head (std::string)
+    //    4) number of studios (int)
+    //    5) department logo (std::string)
+    //3 things it can do:
+    //    1) implement audio productions
+    //    2) test audio software
+    //    3) record audio
 
 };
 
 /*
 Thing 6) visual department
-5 properties:
-    1) number of videocameras (int)
-    2) number of light projectors (int)
-    3) department logo (std::string)
-    4) prefered editing software (std::string)
-    5) prefered cloud storage solution (std::string)
-3 things it can do:
-    1) create animation
-    2) color grade video footage
-    3) edit short films
+
  */
 struct visualDepartment
 {
+    //5 properties:
+    //    1) number of videocameras (int)
+    //    2) number of light projectors (int)
+    //    3) department logo (std::string)
+    //    4) prefered editing software (std::string)
+    //    5) prefered cloud storage solution (std::string)
+    //3 things it can do:
+    //    1) create animation
+    //    2) color grade video footage
+    // 3) edit short films
 
 };
 
 /*
 Thing 7) sales
-5 properties:
-    1) software copies sold (int)
-    2) software price (float)
-    3) number of steady clients (int)
-    4) number of subscribers to cloud solutions (int)
-    5) department email address (std::string)
-3 things it can do:
-    1) sell software
-    2) reach out to potential clients
-    3) negotiate better deals for large contracts
+
  */
 struct sales
 {
+    //5 properties:
+    //    1) software copies sold (int)
+    //    2) software price (float)
+    //    3) number of steady clients (int)
+    //    4) number of subscribers to cloud solutions (int)
+    //    5) department email address (std::string)
+    //3 things it can do:
+    //    1) sell software
+    //    2) reach out to potential clients
+    //    3) negotiate better deals for large contracts
 
 };
 
 /*
 Thing 8) RnD department
-5 properties:
-    1) number of laboratories (int)
-    2) prefered programming language (std::string)
-    3) available funding (float)
-    4) prefered academic background (std::string)
-    5) total number of programming languages used (int)
-3 things it can do:
-    1) develop software
-    2) implement new algorithms
-    3) reseach human perception of audio
+
  */
 struct rndDevelopment
 {
+    //5 properties:
+    //    1) number of laboratories (int)
+    //    2) prefered programming language (std::string)
+    //    3) available funding (float)
+    //    4) prefered academic background (std::string)
+    //    5) total number of programming languages used (int)
+    //3 things it can do:
+    //    1) develop software
+    //    2) implement new algorithms
+    //    3) reseach human perception of audio
 
 };
 
 /*
 Thing 9) finance and advertising
-5 properties:
-    1) number of employees (int)
-    2) employee salary (float)
-    3) manager salary (float)
-    4) number of social media platforms used for advertising (int)
-    5) department head (std::string)
-3 things it can do:
-    1) advertise the companie's products on social media
-    2) create the company logo
-    3) pay the employees
+
  */
 struct financeAndAdvertising
 {
+    //5 properties:
+    //    1) number of employees (int)
+    //    2) employee salary (float)
+    //    3) manager salary (float)
+    //    4) number of social media platforms used for advertising (int)
+    //    5) department head (std::string)
+    //3 things it can do:
+    //    1) advertise the companie's products on social media
+    //    2) create the company logo
+    //    3) pay the employees
 
 };
 
 /*
 Thing 10) audiovisual company
-5 properties:
-    1) audio department
-    2) visual department
-    3) sales
-    4) RnD department
-    5) finance and marketing
-3 things it can do:
-    1) create audiovisual content
-    2) develop new audiovisual software
-    3) sell products to customers
+
 */
- */
+ 
 struct audiovisualCompany
 {
+    //5 properties:
+    //    1) audio department
+    //    2) visual department
+    //    3) sales
+    //    4) RnD department
+    //    5) finance and marketing
+    //3 things it can do:
+    //    1) create audiovisual content
+    //    2) develop new audiovisual software
+    //    3) sell products to customers
 
 };
 
