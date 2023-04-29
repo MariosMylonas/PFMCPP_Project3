@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include <string>
 
 /*
@@ -456,11 +456,11 @@ struct Computer
         int verticalPixels = 2160;
         float inches = 40.3f;
         std::string panelType = "IPS";
-        float pixelDensity = 110.15;
+        float pixelDensity = 110.15f;
 
         void transmitVideo(std::string connectorType = "HDMI");
         float setNitBrightness(); //returns the nit brightness value
-        void connectUSB(bool availablePort = "false");
+        void connectUsbToMonitor(bool availablePort = false);
     };
 
     //3 things it can do:
@@ -469,7 +469,10 @@ struct Computer
     //    2) produce MIDI
             void produceMidi();
     //    3) stream movies
-            void streamMovies();
+            void streamMovies(Monitor monitor);
+
+    void buyNewMonitor(Monitor newMonitor);
+    Monitor monitor;
 };
 
 /*
@@ -532,11 +535,13 @@ struct BasketballCourt
 
     //3 things it can do:
     //    1) host basketball games
-            void hostBasketballGames();
+            void hostBasketballGames(EventsSchedule scheduledGameDay);
     //    2) host sport events
             void hostSportEvents();
     //    3) sell tickets
             float sellTickets(float ticketPrice); //returns the amount of money earned
+        void scheduleNewGameDay(EventsSchedule newGameDay);
+        EventsSchedule scheduledGameDay;
 };
 
 /*
@@ -725,7 +730,7 @@ struct audiovisualCompany
     //    2) develop new audiovisual software
             void developNewAudiovisualSoftware();
     //    3) sell products to customers
-            void sellProductsToCustomers();
+            void sellProductsToCustomers();    
 
 };
 
@@ -1069,7 +1074,7 @@ struct CarWash
     a much more relevant usage would be adding a member function that hires a new manager:
 
     struct SoccerTeam
-    {
+       {
         struct Manager
         {
             ...
