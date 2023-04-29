@@ -730,7 +730,7 @@ struct audiovisualCompany
     //    2) develop new audiovisual software
             void developNewAudiovisualSoftware();
     //    3) sell products to customers
-            void sellProductsToCustomers();    
+            float sellProductsToCustomers(float softwarePrice, int softwarePiecesSold, int numberOfSubscribersToCloudSolutions, float subscriptionPrice);  //returns the total earnings  
 
 };
 
