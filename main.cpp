@@ -108,8 +108,54 @@ struct CarWash
     You'll need to insert the Person struct from the video in the space below.
  */
 
+struct Person
+{
+    struct Steps
+    {
+        void stepForward();
+        int stepSize();
+    };
 
+    int age;
+    int height;
+    float hairLength;
+    float GPA;
+    unsigned int SATScore;
+    int distanceTraveled;
+    Steps leftFoot;
+    Steps rightFoot;
 
+    void run(int howFast, bool startWithLeftFoot);
+};
+
+void Person::run(int howFast, bool startWithLeftFoot)
+{
+    if(startWithLeftFoot == true)
+    {
+        leftFoot.stepForward();
+        rightFoot.stepForward();
+    }
+    else
+    {
+        rightFoot.stepForward();
+        leftFoot.stepForward();
+    }
+    
+    distanceTraveled += leftFoot.stepSize() + rightFoot.stepSize();
+    int timeRunning = distanceTraveled / howFast;
+    std::cout << "the time you spend running is" << timeRunning;
+}
+
+void Person::Steps::stepForward()
+{
+    std::cout << "start running";
+}
+
+int Person::Steps::stepSize()
+{
+    int size = 18;
+    return size;
+}
 
 
  /*
@@ -133,25 +179,15 @@ struct CarWash
 
 
 
-/*
-Thing 1) computer
 
- */
 struct Computer
 {
-    //5 properties:
-    //    1) amount of ram (int)
     int ram = 16;
-    //    2) CPU cores (int)
     int cpuCores = 8;
-    //    3) GPU cores (int)
     int gpuCores = 8;
-    //    4) amount of memory (int)
     int amountOfMemory = 512;
-    //    5) daily hours of operation (float)
     float dailyHoursOfOperation = 8.5f;
 
-    //this is the nested UDT
     struct Monitor
     {
         int horizontalPixels = 3840;
@@ -161,67 +197,133 @@ struct Computer
         float pixelDensity = 110.15f;
 
         void transmitVideo(std::string connectorType = "HDMI");
-        float setNitBrightness(); //returns the nit brightness value
+        float setNitBrightness();
         void connectUsbToMonitor(bool availablePort = false);
     };
 
-    //3 things it can do:
-    //    1) compile code
     void compileCode();
-    //    2) produce MIDI
     void produceMidi();
-    //    3) stream movies
     void streamMovies(Monitor monitor);
-
     void buyNewMonitor(Monitor newMonitor);
     Monitor monitor;
 };
 
-/*
-Thing 2) synthesizer
+void Computer::Monitor::transmitVideo(std::string connectorType)
+{
+    std::cout << "connect the appropriate cable to the" << connectorType << "port"; 
+}
 
- */
+float Computer::Monitor::setNitBrightness()
+{
+    float brightnessLevel = 58.2f;
+    return brightnessLevel;
+}
+
+void Computer::Monitor::connectUsbToMonitor(bool availablePort)
+{
+    if(availablePort == true)
+    {
+        std::cout << "connect USB to port";
+    }
+    else
+    {
+        std::cout << "Free up a port that is not needed for the operation of the computer";
+    }
+}
+
+void Computer::compileCode()
+{
+    bool codeDebugged = false;
+
+    if(codeDebugged == true)
+    {
+        std::cout << "Run Compiler";
+    }
+    else
+    {
+        std::cout << "debug code";
+    }
+}
+
+void Computer::produceMidi()
+{
+    bool dawRunning = true;
+    if(dawRunning == true)
+    {
+        std::cout << "insert midi notes";
+    }
+    else
+    {
+        std::cout << "open your DAW";
+    }
+}
+
+void Computer::streamMovies(Monitor existingMonitor)
+{
+    
+    std::string name = "Name of streaming service";
+    bool subscriptionPaid = true;
+    if(subscriptionPaid == true)
+    {
+        existingMonitor.transmitVideo();
+    }
+    else
+    {
+        std::cout << "Pay the subscription";
+    }
+}
+
+void Computer::buyNewMonitor(Monitor newMonitor)
+{
+    float newMonitorPrice = 428.12f;
+    float availableMoney = 982.17f;
+    float moneyLeftOver = availableMoney - newMonitorPrice;
+    std::cout << "your remaining money is" << moneyLeftOver;
+    newMonitor.setNitBrightness();
+    monitor = newMonitor;
+    
+}
+
 struct Synthesizer
 {
-    //5 properties:
-    //    1) number of keys (int)
     int numberOfKeys = 61;
-    //    2) number of oscillators (int)
     int numberOfOscillators = 4;
-    //    3) number of LFOs (int)
     int numberOfLfos = 2;
-    //    4) output volume (double)
     double outputVolume = 72.8;
-    //    5) Attack time (float)
     float attackTime = 0.31f;
-    //3 things it can do:
-    //    1) generate audio
-    void generateAudio(float inputFrequency);
-    //    2) fitler frequencies
+
+    float generateAudio(float inputFrequency);
     void filterFrequencies(float cutOffFrequency);
-    //    3) change the audio's envelope
     void changeTheAudioEnvelope();
 };
 
-/*
-Thing 3) basketball court
+float Synthesizer::generateAudio(float inputFrequency)
+{
+    float frequencyModulation = 628.12f;
+    float outputFrequency = inputFrequency * frequencyModulation;
+    return outputFrequency;
+}
 
- */
+void Synthesizer::filterFrequencies(float cutOfFrequency)
+{
+    std::cout << "the cut off frequency is" << cutOfFrequency; 
+}
+
+void Synthesizer::changeTheAudioEnvelope()
+{
+    float newAttackTime = 0.12f;
+    attackTime = newAttackTime;
+}
+
+
 struct BasketballCourt
 {
-    //5 properties:
-    //    1) number of basketballs (int)
     int numberOfBasketballs = 41;
-    //    2) nubmer of seats (int)
     int numberOfSeats = 25000;
-    //    3) cafeteria profits (float)
     float cafeteriaProfits = 684.18f;
-    //    4) administration personel size (int)
     int administraionPersonelSize = 14;
-    //    5) team size (int)
     int teamSize = 12;
 
-    //this is the nested UDT
     struct EventsSchedule
     {
         int bookedDaysPerMonth = 24;
@@ -231,214 +333,320 @@ struct BasketballCourt
         std::string appForOrganizing = "Notion";
 
         void cancelAllMondayEvents(int numberOfMondayEvents);
-        void rescheduleAllWendesdayEvents(int numberOfWendesdayEvents);
+        void rescheduleAllWednesdayEvents(int numberOfWednesdayEvents);
         void organizeNextMonthsSchedule();
     };
 
-    //3 things it can do:
-    //    1) host basketball games
     void hostBasketballGames(EventsSchedule scheduledGameDay);
-    //    2) host sport events
     void hostSportEvents();
-    //    3) sell tickets
-    float sellTickets(float ticketPrice); //returns the amount of money earned
+    float sellTickets(float ticketPrice);
+
     void scheduleNewGameDay(EventsSchedule newGameDay);
     EventsSchedule scheduledGameDay;
 };
 
-/*
-Thing 4) cafeteria
+void BasketballCourt::EventsSchedule::cancelAllMondayEvents(int numberOfMondayEvents)
+{
+    std::cout << numberOfMondayEvents << "events have been cancelled";
+}
 
- */
+void BasketballCourt::EventsSchedule::rescheduleAllWednesdayEvents(int numberOfWednesdayEvents)
+{
+    std::cout << numberOfWednesdayEvents << "events have been rescheduled";
+}
+
+void BasketballCourt::EventsSchedule::organizeNextMonthsSchedule()
+{
+    int numberOfNextMonthsEvents = 18;
+    std::cout << "organize" << numberOfNextMonthsEvents << "next month";
+}
+
+void BasketballCourt::hostBasketballGames(EventsSchedule gameDay)
+{
+    gameDay.rescheduleAllWednesdayEvents(2);
+}
+
+void BasketballCourt::hostSportEvents()
+{
+    std::string nameOfEvent = "event name";
+    std::string eventDate = "date";
+    std::cout << nameOfEvent << "will take place on" << eventDate;
+}
+
+float BasketballCourt::sellTickets(float ticketPrice)
+{
+    int numberOfTicketsSold = 651.0;
+    float ticketsFloat;
+    ticketsFloat = float(numberOfTicketsSold);
+    float earnings = ticketPrice * ticketsFloat;
+    return earnings;
+}
+
+void BasketballCourt::scheduleNewGameDay(EventsSchedule newGameDay)
+{
+    newGameDay.organizeNextMonthsSchedule();
+    scheduledGameDay = newGameDay;
+}
+
 struct Cafeteria
 {
-    //5 properties:
-    //    1) price of coffee (float)
     float priceOfCoffee = 3.2f;
-    //    2) amount of emplyees (int)
     int amountOfEmployees = 8;
-    //    3) price of sandwich (float)
     float priceOfSandwich = 4.8f;
-    //    4) amount of rent per month (float)
     float amountOfRentPerMonth = 1028.12f;
-    //    5) number of customers per month (int)
     int numberOfCustomersPerMonth = 964;
-    //3 things it can do:
-    //    1) sell coffee
-    float sellCoffee(float coffeePrice); //returns the amount of money earned
-    //    2) provide a place for friendly meetings
-    void providePlaceForFriendlyMeetings();
-    //    3) sell snacks
-    float sellSnacks(float snacksPrice); //returns the amount of money earned
 
+    float sellCoffee(float coffeePrice);
+    void providePlaceForFriendlyMeetings();
+    float sellSnacks(float snacksPrice);
 };
 
-/*
-Thing 5) audio department
+float Cafeteria::sellCoffee(float coffeePrice)
+{
+    int numberOfCoffeesSold = 132;
+    float coffeesFloat;
+    coffeesFloat = float(numberOfCoffeesSold);
+    float profit = coffeePrice * coffeesFloat;
+    return profit;
+}
 
- */
+void Cafeteria::providePlaceForFriendlyMeetings()
+{
+    int time = 8;
+    std::string day = "Friday";
+    std::cout << "the meeting will take place on" << day << "at" << time << "o'clock";
+}
+
+float Cafeteria::sellSnacks(float snacksPrice)
+{
+    int numberOfSnacksSold = 44;
+    float snacksFloat;
+    snacksFloat = float(numberOfSnacksSold);
+    float amountEarned = snacksPrice * snacksFloat;
+    return amountEarned; 
+}
+
+
 struct AudioDepartment
 {
-    //5 properties:
-    //    1) personel size (int)
     int personelSize = 68;
-    //    2) allocated budget (float)
     float allocatedBudget = 12832.4f;
-    //    3) department head (std::string)
     std::string departmentHead = "John";
-    //    4) number of studios (int)
     int numberOfStudios = 3;
-    //    5) department logo (std::string)
     std::string departmentLogo = "all Audio";
-    //3 things it can do:
-    //    1) implement audio productions
-    void implementAudioProductions();
-    //    2) test audio software
-    void testAudioSoftware();
-    //    3) record audio
-    void recordAudio(int numberOfMicrophones);
 
+    void implementAudioProductions();
+    void testAudioSoftware();
+    void recordAudio(int numberOfMicrophones);
 };
 
-/*
-Thing 6) visual department
+void AudioDepartment::implementAudioProductions()
+{
+    std::cout << "produce film audio and orchestral music";
+}
 
- */
+void AudioDepartment::testAudioSoftware()
+{
+    bool softwareWorking = true;
+    if(softwareWorking == true)
+    {
+        std::cout << "anounce sales department";
+    }
+    else
+    {
+        std::cout << "keep working on the software";
+    }
+}
+
+void AudioDepartment::recordAudio(int numberOfMicrophones)
+{
+    std::cout << "record" << numberOfMicrophones << "different sources simultaneously";
+}
+
 struct VisualDepartment
 {
-    //5 properties:
-    //    1) number of videocameras (int)
     int numberOfVideocameras = 11;
-    //    2) number of light projectors (int)
     int numberOfLightProjectors = 8;
-    //    3) department logo (std::string)
     std::string departmentLogo = "all Video";
-    //    4) prefered editing software (std::string)
     std::string preferedEditingSoftware = "davinci resolve";
-    //    5) prefered cloud storage solution (std::string)
     std::string preferedCloudStorageSolution = "dropbox for business";
-    //3 things it can do:
-    //    1) create animation
-    void createAnimation();
-    //    2) color grade video footage
-    void colorGradeVideoFootage();
-    //    3) edit short films
-    void editShortFilms();
 
+    void createAnimation();
+    void colorGradeVideoFootage();
+    void editShortFilms();
 };
 
-/*
-Thing 7) sales
+void VisualDepartment::createAnimation()
+{
+    int numberOfAnimators = 12;
+    std::cout << "employ" << numberOfAnimators << "people to create the animation";
+}
 
- */
+void VisualDepartment::colorGradeVideoFootage()
+{
+    int numberOfColorsAvailable = 1231232;
+    std::string colorProfile = "RGB";
+    std::cout << "use the" << numberOfColorsAvailable << "available colours in the" << colorProfile << "profile";
+}
+
+void VisualDepartment::editShortFilms()
+{
+    float filmLength = 32.42f;
+    float rawFootageLength = 123.51f;
+    std::cout << "edit the" << rawFootageLength << "minutes into a" << filmLength << "minutes long film";
+}
+
 struct Sales
 {
-    //5 properties:
-    //    1) software copies sold (int)
     int softwareCopiesSold = 19842;
-    //    2) software price (float)
     float softwarePrice = 98.12f;
-    //    3) number of steady clients (int)
     int numberOfSteadyClients = 84;
-    //    4) number of subscribers to cloud solutions (int)
     int numberOfSubscribersToCloudSolutions = 81;
-    //    5) department email address (std::string)
     std::string departmentEmailAddress = "companymail@gmail.com";
-    //3 things it can do:
-    //    1) sell software
-    float sellSoftware(float softwarePrice); //returns the amount of money earned
-    //    2) reach out to potential clients
-    void reachOutToPotentialClients();
-    //    3) negotiate better deals for large contracts
-    void negotiateBetterDealsForLargeContracts();
 
+    float sellSoftware(float softwarePrice);
+    void reachOutToPotentialClients();
+    void negotiateBetterDealsForLargeContracts();
 };
 
-/*
-Thing 8) RnD department
+float Sales::sellSoftware(float softwareCopyPrice)
+{
+    int numberOfSoftwareCopiesSold = 144;
+    float copiesFloat;
+    copiesFloat = float(numberOfSoftwareCopiesSold);
+    float profitMade = softwareCopyPrice * copiesFloat;
+    return profitMade;    
+}
 
- */
+void Sales::reachOutToPotentialClients()
+{
+    int clientNumber = 05512;
+    std::cout << "call at" << clientNumber << "and sell the software";
+}
+
+void Sales::negotiateBetterDealsForLargeContracts()
+{
+    float contractPrice = 124.12f;
+    float desiredPrice = 128.19f;
+    std::cout << "sell the deal at" << desiredPrice << "from" << contractPrice;
+}
+
 struct RndDevelopment
 {
-    //5 properties:
-    //    1) number of laboratories (int)
     int numberOfLaboratories = 4;
-    //    2) prefered programming language (std::string)
     std::string preferedProgrammingLanguage = "C++";
-    //    3) available funding (float)
     float availableFunding = 14121.5f;
-    //    4) prefered academic background (std::string)
     std::string preferedAcademicBackground = "Master's degree";
-    //    5) total number of programming languages used (int)
     int totalNumberOfProgrammingLanguagesUsed = 5;
-    //3 things it can do:
-    //    1) develop software
-    void developSoftware();
-    //    2) implement new algorithms
-    void implementNewAlgorithms();
-    //    3) reseach human perception of audio
-    void researchHumanPerceptionOfAudio();
 
+    void developSoftware();
+    void implementNewAlgorithms();
+    void researchHumanPerceptionOfAudio();
 };
 
-/*
-Thing 9) finance and advertising
+void RndDevelopment::developSoftware()
 
- */
+{
+    bool researchFinished = true;
+    if(researchFinished == true)
+    {
+        std::cout << "start developing";
+    }
+    else
+    {
+        std::cout << "keep researching";
+    }    
+}
+
+void RndDevelopment::implementNewAlgorithms()
+{
+    bool algorithmEffective = true;
+    if(algorithmEffective == true)
+    {
+        std::cout << "implement into research";
+    }
+    else
+    {
+        std::cout << "keep optimizing";
+    }      
+}
+
+void RndDevelopment::researchHumanPerceptionOfAudio()
+{
+    int numberOfPsychoacousticTests = 12;
+    std::cout << "implement" << numberOfPsychoacousticTests << "tests";
+}
+
 struct FinanceAndAdvertising
 {
-    //5 properties:
-    //    1) number of employees (int)
     int numberOfEmployees = 28;
-    //    2) employee salary (float)
     float employeeSalary = 62850.4f;
-    //    3) manager salary (float)
     float managerSalary = 81372.9f;
-    //    4) number of social media platforms used for advertising (int)
     int numberOfSocialMediaPlatformsUsedForAdvertising = 11;
-    //    5) department head (std::string)
     std::string departmentHead = "Mary";
-    //3 things it can do:
-    //    1) advertise the companie's products on social media
+
     void advertiseCompanyProductsOnSocialMedia();
-    //    2) create the company logo
     void createCompanyLogo();
-    //    3) pay the employees
-    float payTheEmployees(float employeeSalary, int numberOfEmployees); //returns the amount of money paid to the employes
-
+    float payTheEmployees(float employeeSalary, int numberOfEmployees);
 };
 
-/*
-Thing 10) audiovisual company
-
-*/
- 
-struct audiovisualCompany
+void FinanceAndAdvertising::advertiseCompanyProductsOnSocialMedia()
 {
-    //5 properties:
-    //    1) audio department
-    AudioDepartment audioDepartment;
-    //    2) visual department
-    VisualDepartment visualDepartment;
-    //    3) sales
-    Sales sales;
-    //    4) RnD department
-    RndDevelopment rndDevelopment;
-    //    5) finance and advertising
-    FinanceAndAdvertising financeAndAdvertising;
-    //3 things it can do:
-    //    1) create audiovisual content
-    void createAudiovisualContent();
-    //    2) develop new audiovisual software
-    void developNewAudiovisualSoftware();
-    //    3) sell products to customers
-    float sellProductsToCustomers(float softwarePrice, int softwarePiecesSold, int numberOfSubscribersToCloudSolutions, float subscriptionPrice);  //returns the total earnings  
+    std::string mainPlatform = "platform";
+    int desiredViews = 19283;
+    std::cout << "advertise on" << mainPlatform << "until you reach" << desiredViews << "views";
+}
 
+void FinanceAndAdvertising::createCompanyLogo()
+{
+    std::string wordsOnLogo = "audiovisual";
+    std::cout << "create a logo based on" << wordsOnLogo;
+}
+
+float FinanceAndAdvertising::payTheEmployees(float employeesSalary, int totalNumberOfEmployees)
+{
+    float employeesFloat;
+    employeesFloat = float(totalNumberOfEmployees);
+    float amountPaid = employeesSalary * employeesFloat;
+    return amountPaid;
+}
+ 
+struct AudiovisualCompany
+{
+    AudioDepartment audioDepartment;
+    VisualDepartment visualDepartment;
+    Sales sales;
+    RndDevelopment rndDevelopment;
+    FinanceAndAdvertising financeAndAdvertising;
+
+    void createAudiovisualContent();
+    void developNewAudiovisualSoftware();
+    float sellProductsToCustomers(float softwarePrice, int softwarePiecesSold, int numberOfSubscribersToCloudSolutions, float subscriptionPrice);
 };
 
+void AudiovisualCompany::createAudiovisualContent()
+{
+    int numberOfUpcomingProductions = 8;
+    std::cout << "develop content for" << numberOfUpcomingProductions << "productions";
+}
 
+void AudiovisualCompany::developNewAudiovisualSoftware()
+{
+    int numberOfWorkingEmployeesOnProject = 12;
+    int numberOfTasksToBeDone = 92;
+    std::string projectManager = "Tom";
+    std::cout << "employ" << projectManager << "to allocate to the" << numberOfWorkingEmployeesOnProject << "employees the" << numberOfTasksToBeDone << "tasks required";
+}
 
-
+float AudiovisualCompany::sellProductsToCustomers(float softwarePrice, int softwarePiecesSold, int numberOfSubscribersToCloudSolutions, float subscriptionPrice)
+{
+    float softwarePiecesFloat;
+    softwarePiecesFloat = float(softwarePiecesSold);
+    float cloudSubscribersFLoat;
+    cloudSubscribersFLoat = float(numberOfSubscribersToCloudSolutions);
+    float totalCompanyEarnings = softwarePrice * softwarePiecesFloat + subscriptionPrice * cloudSubscribersFLoat;
+    return totalCompanyEarnings;
+}
 
 
 
