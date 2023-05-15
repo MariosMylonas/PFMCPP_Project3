@@ -266,7 +266,7 @@ void Computer::streamMovies(Monitor existingMonitor)
     if(subscriptionPaid == true)
     {
         existingMonitor.transmitVideo();
-    }
+    }    
     else
     {
         std::cout << "Pay the subscription";
@@ -375,10 +375,8 @@ void BasketballCourt::hostSportEvents()
 
 float BasketballCourt::sellTickets(float ticketPrice)
 {
-    int numberOfTicketsSold = 651.0;
-    float ticketsFloat;
-    ticketsFloat = float(numberOfTicketsSold);
-    float earnings = ticketPrice * ticketsFloat;
+    float numberOfTicketsSold = 651.0f;
+    float earnings = ticketPrice * numberOfTicketsSold;
     return earnings;
 }
 
@@ -403,10 +401,8 @@ struct Cafeteria
 
 float Cafeteria::sellCoffee(float coffeePrice)
 {
-    int numberOfCoffeesSold = 132;
-    float coffeesFloat;
-    coffeesFloat = float(numberOfCoffeesSold);
-    float profit = coffeePrice * coffeesFloat;
+    float numberOfCoffeesSold = 132.0f;
+    float profit = coffeePrice * numberOfCoffeesSold;
     return profit;
 }
 
@@ -419,10 +415,8 @@ void Cafeteria::providePlaceForFriendlyMeetings()
 
 float Cafeteria::sellSnacks(float snacksPrice)
 {
-    int numberOfSnacksSold = 44;
-    float snacksFloat;
-    snacksFloat = float(numberOfSnacksSold);
-    float amountEarned = snacksPrice * snacksFloat;
+    float numberOfSnacksSold = 44.0f;
+    float amountEarned = snacksPrice * numberOfSnacksSold;
     return amountEarned; 
 }
 
@@ -511,10 +505,8 @@ struct Sales
 
 float Sales::sellSoftware(float softwareCopyPrice)
 {
-    int numberOfSoftwareCopiesSold = 144;
-    float copiesFloat;
-    copiesFloat = float(numberOfSoftwareCopiesSold);
-    float profitMade = softwareCopyPrice * copiesFloat;
+    float numberOfSoftwareCopiesSold = 144.0f;
+    float profitMade = softwareCopyPrice * numberOfSoftwareCopiesSold;
     return profitMade;    
 }
 
@@ -587,7 +579,7 @@ struct FinanceAndAdvertising
 
     void advertiseCompanyProductsOnSocialMedia();
     void createCompanyLogo();
-    float payTheEmployees(float employeeSalary, int numberOfEmployees);
+    float payTheEmployees(float employeeSalary, float numberOfEmployees);
 };
 
 void FinanceAndAdvertising::advertiseCompanyProductsOnSocialMedia()
@@ -603,11 +595,9 @@ void FinanceAndAdvertising::createCompanyLogo()
     std::cout << "create a logo based on" << wordsOnLogo;
 }
 
-float FinanceAndAdvertising::payTheEmployees(float employeesSalary, int totalNumberOfEmployees)
+float FinanceAndAdvertising::payTheEmployees(float employeesSalary, float totalNumberOfEmployees)
 {
-    float employeesFloat;
-    employeesFloat = float(totalNumberOfEmployees);
-    float amountPaid = employeesSalary * employeesFloat;
+    float amountPaid = employeesSalary * totalNumberOfEmployees;
     return amountPaid;
 }
  
@@ -621,7 +611,7 @@ struct AudiovisualCompany
 
     void createAudiovisualContent();
     void developNewAudiovisualSoftware();
-    float sellProductsToCustomers(float softwarePrice, int softwarePiecesSold, int numberOfSubscribersToCloudSolutions, float subscriptionPrice);
+    float sellProductsToCustomers(float softwarePrice, float softwarePiecesSold, float numberOfSubscribersToCloudSolutions, float subscriptionPrice);
 };
 
 void AudiovisualCompany::createAudiovisualContent()
@@ -638,13 +628,9 @@ void AudiovisualCompany::developNewAudiovisualSoftware()
     std::cout << "employ" << projectManager << "to allocate to the" << numberOfWorkingEmployeesOnProject << "employees the" << numberOfTasksToBeDone << "tasks required";
 }
 
-float AudiovisualCompany::sellProductsToCustomers(float softwarePrice, int softwarePiecesSold, int numberOfSubscribersToCloudSolutions, float subscriptionPrice)
+float AudiovisualCompany::sellProductsToCustomers(float softwarePrice, float softwarePiecesSold, float numberOfSubscribersToCloudSolutions, float subscriptionPrice)
 {
-    float softwarePiecesFloat;
-    softwarePiecesFloat = float(softwarePiecesSold);
-    float cloudSubscribersFLoat;
-    cloudSubscribersFLoat = float(numberOfSubscribersToCloudSolutions);
-    float totalCompanyEarnings = softwarePrice * softwarePiecesFloat + subscriptionPrice * cloudSubscribersFLoat;
+    float totalCompanyEarnings = softwarePrice * softwarePiecesSold + subscriptionPrice * numberOfSubscribersToCloudSolutions;
     return totalCompanyEarnings;
 }
 
