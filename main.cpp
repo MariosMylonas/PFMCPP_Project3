@@ -110,7 +110,7 @@ struct CarWash
 
 struct Person
 {
-    struct Steps
+    struct Foot
     {
         void stepForward();
         int stepSize();
@@ -122,8 +122,8 @@ struct Person
     float GPA;
     unsigned int SATScore;
     int distanceTraveled;
-    Steps leftFoot;
-    Steps rightFoot;
+    Foot leftFoot;
+    Foot rightFoot;
 
     void run(int howFast, bool startWithLeftFoot);
 };
@@ -146,12 +146,12 @@ void Person::run(int howFast, bool startWithLeftFoot)
     std::cout << "the time you spend running is" << timeRunning;
 }
 
-void Person::Steps::stepForward()
+void Person::Foot::stepForward()
 {
     std::cout << "start running";
 }
 
-int Person::Steps::stepSize()
+int Person::Foot::stepSize()
 {
     int size = 18;
     return size;
